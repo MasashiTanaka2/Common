@@ -13,6 +13,7 @@
 // get screenSize
 +(CGRect)screenSize
 {
+
     return [[UIScreen mainScreen] bounds];
 }
 
