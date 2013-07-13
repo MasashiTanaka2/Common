@@ -10,11 +10,25 @@
 
 @implementation Common
 
-// get screenSize
-+(CGRect)screenSize
++(CGSize)screenSize
 {
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    return rect.size;
+}
 
-    return [[UIScreen mainScreen] bounds];
++(float)iOSVersionFloat
+{
+    return [[[UIDevice currentDevice] systemVersion] floatValue];
+}
+
++(NSString *)iOSVersionString
+{
+    return [NSString stringWithFormat:@"%.1f", [self iOSVersionFloat]];
+}
+
++(NSInteger)iOSMajorVersion
+{
+    return floorf([self iOSVersionFloat]);
 }
 
 @end

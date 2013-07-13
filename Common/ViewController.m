@@ -18,16 +18,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    CGRect rect = [Common screenSize];
-    NSLog(@"screenSize = %@", NSStringFromCGRect(rect));
-}
+    CGSize screenSize = [Common screenSize];
+    NSLog(@"screenSize = %@", NSStringFromCGSize(screenSize));
+    
+    float version = [Common iOSVersionFloat];
+    NSLog(@"iOS version float = %f", version);
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *versionString = [Common iOSVersionString];
+    NSLog(@"iOS version string = %@", versionString);
+
+    NSInteger majorVersion = [Common iOSMajorVersion];
+    NSLog(@"iOS major version = %d", majorVersion);
 }
 
 @end

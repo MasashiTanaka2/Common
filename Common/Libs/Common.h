@@ -10,6 +10,12 @@
 
 @interface Common : NSObject
 
-+(CGRect)screenSize;
+// screenSize
++(CGSize)screenSize;
+
+// iOSVersion
++(float)iOSVersionFloat;
++(NSString *)iOSVersionString;
++(NSInteger)iOSMajorVersion;
 
 @end
