@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Common.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    CGRect rect = [Common screenSize];
+    NSLog(@"screenSize = %@", NSStringFromCGRect(rect));
 }
 
 - (void)didReceiveMemoryWarning
