@@ -1,2 +1,6 @@
 language: objective-c
 
+before_install:
+  - sudo easy_install cpp-coveralls
+after_success:
+  - make send-coverage
